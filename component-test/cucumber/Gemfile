@@ -1,0 +1,19 @@
+source 'https://gems.cloud.bbc.co.uk' do
+  gem 'aws-helper-v2'
+  gem 'mod_av_cucumber'
+  gem 'rest-assured'
+
+end
+
+source 'https://rubygems.org' do
+  gem 'awesome_print'
+  gem 'aws-sdk'
+  gem 'process-helper'
+  gem 'rest-client'
+  gem 'rubocop', '~> 0.48.1', require: false
+  gem 'sqlite3'
+
+  group :local do
+    gem 'pry'
+  end
+end
