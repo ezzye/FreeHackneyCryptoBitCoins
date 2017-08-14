@@ -10,12 +10,10 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.Map;
 
-import static org.junit.Assert.*;
-
 @RunWith(MockitoJUnitRunner.class)
 public class LambdaNaitiveClientBlocksHandlerTest {
 
-    public LambdaBlockChain lambdaBlockChain;
+    public LambdaBlockChainFactory lambdaBlockChainFactory;
     public LambdaNaitiveClientBlocksHandler handler;
     @Mock Map<String, Object> input;
     @Mock Context context;
@@ -26,13 +24,13 @@ public class LambdaNaitiveClientBlocksHandlerTest {
     @Before
     public void setUp() throws Exception {
         this.handler = new LambdaNaitiveClientBlocksHandler();
-        this.lambdaBlockChain = new LambdaBlockChain();
     }
 
     @Test
     public void handleRequestTest() throws Exception {
         //methods under test
         ApiGatewayResponse expected = handler.handleRequest(input,context);
+        System.out.println(expected.getBody().toString());
     }
 
 }

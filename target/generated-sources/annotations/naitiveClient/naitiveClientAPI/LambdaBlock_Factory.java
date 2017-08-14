@@ -1,6 +1,8 @@
 package naitiveClient.naitiveClientAPI;
 
 import dagger.internal.Factory;
+import naitiveClient.model.LambdaBlock;
+
 import javax.annotation.Generated;
 import javax.inject.Provider;
 
